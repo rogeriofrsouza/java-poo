@@ -1,0 +1,14 @@
+INDEX VERSION 1.131+D:\Cursos\Udemy\3-java-oop\repositorio\1-logica-de programacao-e-algoritmos-em-java\.metadata\.plugins\org.eclipse.jdt.core
+3225071745.index
+217988378.index
+3659706862.index
+1098255976.index
+2282950824.index
+1830430634.index
+876448026.index
+2389854877.index
+176155482.index
+3015936257.index
+747724484.index
+1865797976.index
+265456823.index
