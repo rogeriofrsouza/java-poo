@@ -49,8 +49,7 @@ public class Program {
 		n = sc.nextInt();
 		
 		double[] vet = new double[n];
-		double soma = 0.0, media;
-		
+				
 		for (i = 0; i < vet.length; i++) {
 			System.out.print("Digite um número: ");
 			vet[i] = sc.nextDouble();
@@ -59,12 +58,14 @@ public class Program {
 		System.out.println();
 		System.out.print("Valores = ");
 		
+		double soma = 0.0;
+		
 		for (i = 0; i < vet.length; i++) {
 			System.out.printf("%.1f  ", vet[i]);
 			soma += vet[i];
 		}
 		
-		media = soma / n;
+		double media = soma / n;
 		
 		System.out.println();
 		System.out.printf("Soma = %.2f%n", soma);
@@ -82,10 +83,6 @@ public class Program {
 		
 		Pessoa[] pessoas = new Pessoa[n];
 		
-		double alturaMedia = 0.0, porcentualMenor16;
-		String[] menor16 = new String[n];
-		int cont = 0;
-		
 		for (i = 0; i < pessoas.length; i++) {
 			System.out.printf("Dados da %da pessoa%n", i + 1);
 			
@@ -98,28 +95,33 @@ public class Program {
 			
 			System.out.print("Altura: ");
 			double altura = sc.nextDouble();
-			
-			alturaMedia += altura;
-			
-			if (idade < 16) {
-				menor16[cont] = nome;
-				cont++;
-			}
-			
+		
 			pessoas[i] = new Pessoa(nome, idade, altura);
 		}
 		
+		double alturaMedia = 0.0;
+		int cont = 0;
+		
+		for (i = 0; i < pessoas.length; i++) {
+			alturaMedia += pessoas[i].getAltura();
+			
+			if (pessoas[i].getIdade() < 16) {
+				cont++;
+			}
+		}
+		
 		alturaMedia /= n;
+		double percent = cont * 100.0 / n;  // 100.0 evita que o processamento trunque as casas decimais
 		
 		System.out.println();
 		System.out.printf("Altura média: %.2f%n", alturaMedia);
 		
-		porcentualMenor16 = (double) cont / n * 100.0;
-		System.out.println("Pessoas com menos de 16 anos: " + porcentualMenor16 + "%");
+		System.out.printf("Pessoas com menos de 16 anos: %.1f%%%n", percent);  // %% = um % na tela
 		
-		for (i = 0; i < menor16.length; i++) {
-			if (menor16[i] != null) 
-				System.out.println(menor16[i]);
+		for (i = 0; i < pessoas.length; i++) {
+			if (pessoas[i].getIdade() < 16) {
+				System.out.println(pessoas[i].getNome());
+			}
 		}
 		// --------------------------------
 		
@@ -132,12 +134,13 @@ public class Program {
 		n = sc.nextInt();
 		
 		vect = new int[n];
-		int qtdePares = 0;
-		
+				
 		for (i = 0; i < vect.length; i++) {
 			System.out.print("Digite um número: ");
 			vect[i] = sc.nextInt();
 		}
+		
+		int qtdePares = 0;
 		
 		System.out.println();
 		System.out.println("Números pares:");
@@ -163,13 +166,14 @@ public class Program {
 		n = sc.nextInt();
 		
 		vet = new double[n];
-		double maior = 0.0;
-		int posMaior = -1;
 		
 		for (i = 0; i < vet.length; i++) {
 			System.out.print("Digite um número: ");
 			vet[i] = sc.nextDouble();
 		}
+		
+		double maior = 0.0;
+		int posMaior = 0;
 		
 		for (i = 0; i < vet.length; i++) {
 			if (vet[i] > maior) {
@@ -341,7 +345,7 @@ public class Program {
 			double nota1 = sc.nextDouble();
 			double nota2 = sc.nextDouble();
 			
-			medias[i] = (double) (nota1 + nota2) / 2.0;
+			medias[i] = nota1 + nota2 / 2.0;
 		}
 		
 		System.out.println();
@@ -374,15 +378,14 @@ public class Program {
 			generos[i] = sc.next().charAt(0);
 		}
 		
-		double menorAltura = alturas[0], maiorAltura = 0.0, mediaMulheres = 0.0;
+		double menorAltura = alturas[0], maiorAltura = alturas[0], mediaMulheres = 0.0;
 		int qtdeHomens = 0, qtdeMulheres = 0;
 		
 		for (i = 0; i < n; i++) {
 			if (alturas[i] < menorAltura) {
 				menorAltura = alturas[i];
 			}
-			
-			if (alturas[i] > maiorAltura) {
+			else if (alturas[i] > maiorAltura) {
 				maiorAltura = alturas[i];
 			}
 			
