@@ -37,9 +37,9 @@ public class Program {
 		n = sc.nextInt();
 		Product[] products = new Product[n];  // Instancia um vetor de elementos ponteiros no Heap, com valor padrão null
 		
-		// Usar o .length para não depender de uma variável não atrelada ao vetor (n). O próprio vetor sabe o tamanho dele.
+		// Usar o .length para não depender de uma variável auxiliar. O próprio vetor sabe o tamanho dele.
 		for (i = 0; i < products.length; i++) {
-			sc.nextLine();  // Consome a quebra de linha pendente do nextInt() da linha 35
+			sc.nextLine();  // Consome a quebra de linha pendente do nextInt() da linha 37
 			String name = sc.nextLine();
 			double price = sc.nextDouble();
 			

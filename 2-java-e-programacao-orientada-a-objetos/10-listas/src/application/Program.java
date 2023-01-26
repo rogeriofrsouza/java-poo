@@ -47,8 +47,8 @@ public class Program {
 		
 		/*
 		 *  Lista filtrada com nomes que começam com 'A'
-		 *  Tipo stream aceita operações com expressões lambda mas não é compatível com List
-		 *  Converter stream de volta para List
+		 *  Stream aceita operações com expressões lambda mas não é compatível com List
+		 *  Converter Stream de volta para List
 		 *  Forma do Java 8 para manter a compatibilidade com o tipo List (antigo) e permitir operações lambda
 		 */
 		List<String> result = list.stream().filter(x -> x.charAt(0) == 'A').collect(Collectors.toList());
