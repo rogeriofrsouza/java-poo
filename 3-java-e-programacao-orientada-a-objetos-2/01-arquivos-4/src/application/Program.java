@@ -9,7 +9,7 @@ public class Program {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Enter a folder path: ");
+		System.out.println("Enter a folder path: ");
 		String strPath = sc.nextLine();
 		
 		File path = new File(strPath);  // Caminho de uma pasta ou arquivo
