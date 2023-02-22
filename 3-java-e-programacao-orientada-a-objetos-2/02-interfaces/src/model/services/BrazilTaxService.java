@@ -1,6 +1,7 @@
 package model.services;
 
-public class BrazilTaxService {
+// Classe específica (concreta) que implementa uma interface (tipo genérico)
+public class BrazilTaxService implements TaxService {
 
 	public double tax(double amount) {
 		if (amount <= 100) {

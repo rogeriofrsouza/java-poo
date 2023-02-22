@@ -15,7 +15,7 @@ public class Program {
 	public static void main(String[] args) {
 		
 		/*
-		 * Solução do problema - Parte 1
+		 * Solução do problema - Parte 2
 		 */
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
@@ -28,10 +28,10 @@ public class Program {
 		System.out.print("Car model: ");
 		String carModel = sc.nextLine();
 		
-		System.out.print("Start (dd/MM/yyyy HH:mm): ");
+		System.out.print("Pickup (dd/MM/yyyy HH:mm): ");
 		LocalDateTime start = LocalDateTime.parse(sc.nextLine(), fmt);
 		
-		System.out.print("Finish (dd/MM/yyyy HH:mm): ");
+		System.out.print("Return (dd/MM/yyyy HH:mm): ");
 		LocalDateTime finish = LocalDateTime.parse(sc.nextLine(), fmt);
 		
 		CarRental cr = new CarRental(start, finish, new Vehicle(carModel));
@@ -42,6 +42,10 @@ public class Program {
 		System.out.print("Enter price per day: $");
 		double pricePerDay = sc.nextDouble();
 		
+		/* 
+		 * Deve informar a implementação do TaxService
+		 * Upcasting -> BrazilTaxService é um subtipo de TaxService 
+		 */
 		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
 		rentalService.processInvoice(cr);
 		
