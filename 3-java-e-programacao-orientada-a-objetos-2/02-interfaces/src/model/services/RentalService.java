@@ -5,6 +5,10 @@ import java.time.Duration;
 import model.entities.CarRental;
 import model.entities.Invoice;
 
+/*
+ * Inversão de controle: retira da classe a responsabilidade de instanciar suas dependências, 
+ * evitando a geração de um forte acoplamento e 2 pontos de alteração
+ */
 public class RentalService {
 
 	// Service com atributos

@@ -43,8 +43,10 @@ public class Program {
 		double pricePerDay = sc.nextDouble();
 		
 		/* 
-		 * Deve informar a implementação do TaxService
-		 * Upcasting -> BrazilTaxService é um subtipo de TaxService 
+		 * Program -> Responsável por informar a implementação do TaxService
+		 * Upcasting -> BrazilTaxService é um subtipo de TaxService
+		 * 
+		 * Injeção de dependência (uma forma de realizar a inversão de controle) por meio de construtor
 		 */
 		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
 		rentalService.processInvoice(cr);
