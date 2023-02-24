@@ -11,7 +11,7 @@ public class Program {
 		
 		/*
 		 * Solução utilizando interface e classe abstrata
-		 * Herança e Interface
+		 * Herdar vs. cumprir contrato
 		 */
 		AbstractShape s1 = new Circle(Color.BLACK, 2.0);
 		AbstractShape s2 = new Rectangle(Color.WHITE, 3.0, 4.0);
