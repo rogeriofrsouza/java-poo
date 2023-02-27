@@ -17,7 +17,7 @@ public class Program {
 		myObjs = myNumbers;
 		
 		Object obj;
-		Integer x  = 10;
+		Integer x = 10;
 		obj = x;
 		
 		List<Integer> myInts = Arrays.asList(5, 2, 10);

@@ -40,6 +40,8 @@ public class Program {
 		// Adicionar qualquer tipo de Number ou Object
 		myNums.add(10);
 		myNums.add(3.14);
+		myObjs.add("Bob");
+		myNums.add(-7);
 		
 //		Number x = myNums.get(0);
 	}
