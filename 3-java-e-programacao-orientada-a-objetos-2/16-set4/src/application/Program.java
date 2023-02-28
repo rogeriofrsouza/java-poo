@@ -1,5 +1,6 @@
 package application;
 
+import java.util.Locale;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -9,7 +10,9 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		// A classe do seu conjunto deve implementar o Combarable, para que seja possível o TreeSet ordenar os objetos
+		Locale.setDefault(Locale.US);
+		
+		// A classe do seu conjunto TreeSet deve implementar o Comparable, para que seja possível ordenar os objetos
 		Set<Product> set = new TreeSet<>();
 		
 		set.add(new Product("TV", 900.0));

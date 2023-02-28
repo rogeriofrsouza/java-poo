@@ -28,7 +28,6 @@ public class Product implements Comparable<Product> {
 		this.price = price;
 	}
 
-	// Permite ao Set<Product> comparar objetos produtos por conteúdo
 	@Override
 	public int hashCode() {
 		return Objects.hash(name, price);
