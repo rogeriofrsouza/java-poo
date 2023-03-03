@@ -4,7 +4,6 @@ import java.util.Comparator;
 
 import entities.Product;
 
-// Comparator objeto de classe separada
 public class MyComparator implements Comparator<Product> {
 
 	// Possui um retorno parecido com o compareTo()

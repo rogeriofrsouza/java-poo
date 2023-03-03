@@ -20,7 +20,7 @@ public class Program {
 		list.add(new Product("HD Case", 80.9));
 		
 		/*
-		 * Aplica uma função para cada elemento de uma stream (sequência de dados)
+		 * Aplicar uma função para cada elemento de uma stream (sequência de dados)
 		 * Conversões: List para Stream e Stream para List
 		 * Produz uma nova lista
 		 */

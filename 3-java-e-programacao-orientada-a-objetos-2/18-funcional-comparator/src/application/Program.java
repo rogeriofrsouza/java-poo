@@ -15,7 +15,7 @@ public class Program {
 		list.add(new Product("Notebook", 1200.0));
 		list.add(new Product("Tablet", 450.0));
 		
-		// O ideal é ter critérios de comparação independentes da classe Product
+		// O ideal é ter critérios de comparação independentes da classe Product, deixando-a fechada para alterações
 //		Collections.sort(list);
 		
 		// Comparator<T> -> interface funcional: possui apenas um método abstrato
@@ -31,7 +31,7 @@ public class Program {
 		
 		/*
 		 * Expressão lambda: função anônima (arrow function)
-		 * Compilador faz a inferência de tipos e uma linha dispensa uso de chaves e return
+		 * Compilador faz a inferência de tipos e uma linha dispensa o uso de chaves e return
 		 */
 //		Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
 		

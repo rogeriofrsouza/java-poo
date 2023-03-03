@@ -21,7 +21,7 @@ public class Program {
 		
 		ProductService ps = new ProductService();
 		
-		// Função que recebe outra função lambda como argumento
+		// Função que recebe outra função (lambda) como argumento
 		double sum = ps.filteredSum(list, p -> p.getName().charAt(0) == 'T');
 		
 		System.out.println("Sum = $" + String.format("%.2f", sum));

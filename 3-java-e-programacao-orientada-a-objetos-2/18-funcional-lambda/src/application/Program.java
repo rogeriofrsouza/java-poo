@@ -20,6 +20,7 @@ public class Program {
 		 * Mais difícil de entender do que uma função que depende dos seus próprios valores
 		 */
 		changeOddValues(vect);
+		
 		System.out.println(Arrays.toString(vect));
 		System.out.println();
 		// ---------------------------------------
@@ -32,7 +33,7 @@ public class Program {
 		
 		/*
 		 * Funções são objetos de primeira ordem (ou primeira classe)
-		 * Podem ser passadas como argumento de outra função e podem ainda ser retornadas por esta função
+		 * Podem ser passadas como argumento de outra função e podem ainda ser retornadas
 		 */
 		list.sort(Program::compareProducts);
 		list.forEach(System.out::println);

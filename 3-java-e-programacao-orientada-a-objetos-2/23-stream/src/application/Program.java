@@ -15,7 +15,7 @@ public class Program {
 		
 		System.out.println(Arrays.toString(st1.toArray()));  // Método terminal de stream
 		
-		// 2. Stream a partir do Sream.of()
+		// 2. Stream a partir do Stream.of()
 		Stream<String> st2 = Stream.of("Maria", "Alex", "Bob");
 		
 		System.out.println(Arrays.toString(st2.toArray()));

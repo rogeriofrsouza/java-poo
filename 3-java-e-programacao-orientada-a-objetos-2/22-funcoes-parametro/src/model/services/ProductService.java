@@ -8,10 +8,7 @@ import entities.Product;
 // Classe fechada para alteração -> mudança do filtro
 public class ProductService {
 
-	/*
-	 * Receber a condição como parâmetro da função
-	 * Condição -> Predicado retorna um boolean
-	 */
+	// Receber a condição (predicado) como parâmetro da função
 	public double filteredSum(List<Product> list, Predicate<Product> criteria) {
 		double sum = 0.0;
 		
