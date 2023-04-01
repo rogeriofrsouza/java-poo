@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>  <!-- Cabeçalho básico do xml -->
+<!DOCTYPE xml>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<!-- Objeto de node: define um painel para ancorar objetos em posições -->
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="170.0" layoutY="135.0" mnemonicParsing="false" text="Button" />
+      <Label layoutX="170.0" layoutY="95.0" text="Click here" />
+   </children>
+</AnchorPane>
