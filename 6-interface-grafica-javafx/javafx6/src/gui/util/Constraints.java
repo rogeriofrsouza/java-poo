@@ -2,6 +2,7 @@ package gui.util;
 
 import javafx.scene.control.TextField;
 
+// Limitações para o TextField
 public class Constraints {
 
 	public static void setTextFieldInteger(TextField txt) {
