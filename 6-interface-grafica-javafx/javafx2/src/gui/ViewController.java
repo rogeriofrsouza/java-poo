@@ -6,10 +6,11 @@ import javafx.scene.control.Button;
 // Classe responsável por controlar a tela
 public class ViewController {
 
-	@FXML  // Atributo correspondente ao controle visual (objeto da tela)
-	private Button btnTest;
+	@FXML
+	private Button btnTest;  // Atributo correspondente ao controle visual (objeto da tela)
 	
-	@FXML  // Método para tratar o evento do controle -> Evento principal: click/action
+	// Método para tratar o evento principal do controle -> action (click)
+	@FXML
 	public void onBtnTestAction() {
 		System.out.println("Click");
 	}

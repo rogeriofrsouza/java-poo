@@ -22,22 +22,23 @@ public class ViewController implements Initializable {
 	private TextField txtNumber2;
 	
 	@FXML
-	private Label lblResult;
+	private Button btnSum;
 	
 	@FXML
-	private Button btnSum;
+	private Label lblResult;
 	
 	@FXML
 	public void onBtnSumAction() {
 		try {
 			Locale.setDefault(Locale.US);
 			
-			double number1 = Double.parseDouble(txtNumber1.getText());  // Armazena o valor do TextField na variável
+			double number1 = Double.parseDouble(txtNumber1.getText());
 			double number2 = Double.parseDouble(txtNumber2.getText());
 			double sum = number1 + number2;
 			
 			lblResult.setText(String.format("%.2f", sum));
-		} catch (NumberFormatException e) {
+		}
+		catch (NumberFormatException e) {
 			Alerts.showAlert("Error", "Parse error", e.getMessage(), AlertType.ERROR);
 		}
 	}

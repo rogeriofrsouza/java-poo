@@ -28,14 +28,14 @@ public class ViewController implements Initializable {
 	private ObservableList<Person> obsList;  // Tipo especial de lista associadada com o componente visual
 	
 	@FXML
-	public void onBtnAllAction() {
-		cbxPerson.getItems().forEach(x -> System.out.println(x));
-	}
-	
-	@FXML
 	public void onCbxPersonAction() {
 		Person person = cbxPerson.getSelectionModel().getSelectedItem();
 		System.out.println(person);
+	}
+	
+	@FXML
+	public void onBtnAllAction() {
+		cbxPerson.getItems().forEach(x -> System.out.println(x));
 	}
 
 	@Override

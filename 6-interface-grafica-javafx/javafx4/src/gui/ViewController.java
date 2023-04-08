@@ -18,10 +18,10 @@ public class ViewController {
 	private TextField txtNumber2;
 	
 	@FXML
-	private Label lblResult;
+	private Button btnSum;
 	
 	@FXML
-	private Button btnSum;
+	private Label lblResult;
 	
 	@FXML
 	public void onBtnSumAction() {
@@ -33,7 +33,8 @@ public class ViewController {
 			double sum = number1 + number2;
 			
 			lblResult.setText(String.format("%.2f", sum));
-		} catch (NumberFormatException e) {
+		}
+		catch (NumberFormatException e) {
 			Alerts.showAlert("Error", "Parse error", e.getMessage(), AlertType.ERROR);
 		}
 	}
